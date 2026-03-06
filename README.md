@@ -19,7 +19,7 @@ Each project opts in with ~6 lines added to `docker-compose.yml`. One shared Cad
 ## Install
 
 ```bash
-npx skills add wjessup/agent-skills@caddy-docker-proxy-local
+npx skills add wjessup/caddy-docker-proxy-local
 ```
 
-See [SKILL.md](skills/caddy-docker-proxy-local/SKILL.md) for the full setup guide.
+See [SKILL.md](SKILL.md) for the full setup guide.
