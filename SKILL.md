@@ -87,7 +87,7 @@ services:
       - "3000"
 ```
 
-Use `expose` (not `ports`) — Caddy handles external access. Only publish `ports` if you also need direct access bypassing the proxy.
+Use `expose` (not `ports`) — this makes the port visible to Caddy on the Docker network without binding it to your host. No port conflicts even if five projects all use port 3000 internally. Only add `ports` if you need to bypass the proxy and hit the container directly.
 
 ### 3. Add routing labels
 
