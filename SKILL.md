@@ -65,7 +65,22 @@ If the user already has this running, skip it.
 
 ## Per-Project Setup
 
-Add three things to any `docker-compose.yml`:
+Add convenience scripts to the project's `package.json` so developers run simple commands, not raw Docker:
+
+```json
+{
+  "scripts": {
+    "up": "docker compose up -d",
+    "down": "docker compose down",
+    "logs": "docker compose logs -f",
+    "restart": "docker compose down && docker compose up -d"
+  }
+}
+```
+
+This gives `npm run up` / `bun run up` / `yarn up` etc. Always add these — never tell users to run `docker compose` directly.
+
+Then add three things to `docker-compose.yml`:
 
 ### 1. Join the caddy network
 
